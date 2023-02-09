@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    color: #00D4FF;
+    filter: brightness(1.5);
+}
+
+.mySwiper{
+    overflow-y: hidden;
+}
+
+@media screen and (max-width:600px) {
+    .mySwiper{
+        margin-top: 5rem;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after{
+        scale: 0.6;
+    }
+}
