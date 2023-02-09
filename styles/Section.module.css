@@ -1,0 +1,54 @@
+.head{
+    text-transform: uppercase;
+    font-family: 'Nunito Sans', sans-serif;
+    width: 27rem;
+    margin: auto;
+    margin-top: 5.5rem;
+}
+
+.mobHead{
+    display: none;
+}
+
+@media screen and (max-width:960px) and (min-width:930px) {
+    .head{
+        margin-top: 8.5rem;
+    }
+}
+
+@media screen and (max-width:930px) and (min-width:650px) {
+    .head{
+        margin-top: 9.1rem;
+    }
+}
+
+@media screen and (max-width:650px) and (min-width:550px) {
+    .head{
+        margin-top: 10.5rem;
+    }
+}
+
+@media screen and (min-width:520px) and (max-width:550px) {
+    .head{
+        margin-top: 19.5rem;
+    }
+}
+
+@media screen and (min-width:430px) and (max-width:520px) {
+    .head{
+        margin-top: 20rem;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .mobHead{
+        display: block;
+    }
+    .pcHead{
+        display: none;
+    }
+    .head{
+        margin-top: 20rem;
+        width: 18rem;
+    }
+}

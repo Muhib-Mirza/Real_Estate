@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Carousel from './Component/Carousel'
-import style from "../styles/SearchBar.module.css";
 import Searchbar from './Component/SearchBar';
+import style from "../styles/Section.module.css";
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
@@ -13,6 +14,40 @@ export default function Home() {
       </Head>
       <Carousel />
       <Searchbar />
+      <div className={style.head }>
+      <motion.h1 initial={{
+        opacity:0,
+        translateY:"5rem"
+      }}
+      whileInView={{
+        translateY:"0rem",
+        opacity:1
+      }}
+      transition={{
+        type:"tween",
+        duration:0.2,
+        ease:"easeIn"
+      }}
+      className={style.pcHead}
+       >
+        Our Categories & Places
+      </motion.h1>
+      <motion.h1 className={ style.mobHead } initial={{
+        opacity:0,
+        translateY:"5rem"
+      }}
+      whileInView={{
+        translateY:"0rem",
+        opacity:1
+      }}
+      transition={{
+        type:"tween",
+        duration:0.2,
+        ease:"easeIn"
+      }}>
+        Our Categories
+      </motion.h1>
+      </div>
     </>
   )
 }
