@@ -3,8 +3,15 @@ import Carousel from './Component/Carousel'
 import Searchbar from './Component/SearchBar';
 import style from "../styles/Section.module.css";
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export default function Home() {
+  const [scimage,setScImage] = useState({
+    house:false,
+    indust:false,
+    commerc:false,
+    land:false,
+  });
   return (
     <>
       <Head>
@@ -24,9 +31,10 @@ export default function Home() {
         opacity:1
       }}
       transition={{
-        type:"tween",
+        type:"spring",
         duration:0.2,
-        ease:"easeIn"
+        stiffness:100,
+        damping:11
       }}
       className={style.pcHead}
        >
@@ -41,13 +49,300 @@ export default function Home() {
         opacity:1
       }}
       transition={{
-        type:"tween",
+        type:"spring",
         duration:0.2,
-        ease:"easeIn"
+        stiffness:150
       }}>
         Our Categories
       </motion.h1>
       </div>
+      <motion.div className={ style.cContainer }
+      initial={{
+        opacity:0
+      }}
+      whileInView={{
+        opacity:1
+      }}
+      transition={{
+        duration:0.1,
+        staggerChildren:0.2
+      }}
+      >
+        <motion.a href='/home' className={ style.card } 
+        initial={{
+          translateY:"7rem",
+          opacity:0,
+          backgroundColor:"#F3F5F1"
+        }}
+        whileInView={{
+          translateY:"0rem",
+          opacity:1
+        }}
+        transition={{
+          type:"spring",
+          stiffness:160,
+          duration:0.1,
+          damping:14.5,
+        }}
+        onMouseEnter={
+          ()=>{
+            setScImage({
+              house:true
+            })
+          }
+        }
+        onMouseLeave={
+          ()=>{
+            setScImage({
+              house:false
+            })
+          }
+        }
+        whileHover={{
+          backgroundColor:"rgba(0,0,0,0.8)"
+        }}
+        >
+          <motion.img src="/House(1).png" alt="" className={ style.cImage } animate={
+            scimage.house ? {
+              scale:1.2,
+            }
+            :{
+              scale:1,
+            }
+          } 
+          transition={{
+            type:"tween",
+            ease:"easeInOut",
+            duration:0.5
+          }}
+          />
+          <motion.div className={ style.cText }
+          animate={
+            scimage.house ? {
+              marginTop:"0.8rem",
+              fontSize:"1.3rem",
+              color:"white"
+            }:{
+              fontSize:"1.1rem",
+              marginTop:"0.2rem",
+              color:"black"
+            }
+          }
+          >
+            Resedential
+          </motion.div>
+        </motion.a>
+        <motion.a href='/land' className={`${style.card} ${style.cmgn} `}
+        initial={{
+          translateY:"7rem",
+          opacity:0,
+          backgroundColor:"#F3F5F1"
+        }}
+        whileInView={{
+          translateY:"0rem",
+          opacity:1
+        }}
+        transition={{
+          type:"spring",
+          stiffness:160,
+          duration:0.1,
+          damping:14.5,
+        }}
+        onMouseEnter={
+          ()=>{
+            setScImage({
+              land:true
+            })
+          }
+        }
+        onMouseLeave={
+          ()=>{
+            setScImage({
+              land:false
+            })
+          }
+        }
+        whileHover={{
+          backgroundColor:"rgba(0,0,0,0.7)"
+        }}
+        >
+          <motion.img src="/House(1).png" alt="" className={ style.cImage } 
+          animate={
+            scimage.land ? {
+              scale:1.2,
+            }
+            :{
+              scale:1,
+            }
+          } 
+          transition={{
+            type:"tween",
+            ease:"easeInOut",
+            duration:0.5
+          }}
+          />
+          <motion.div className={ style.cText }
+          animate={
+            scimage.land ? {
+              marginTop:"0.8rem",
+              fontSize:"1.3rem",
+              color:"white"
+            }:{
+              fontSize:"1.1rem",
+              marginTop:"0.2rem",
+              color:"black"
+            }
+          }
+          >
+            Land
+          </motion.div>
+        </motion.a>
+        <motion.a href='/commercial' className={`${style.card} ${style.cmgn} ${ style.thirdCmgn }`}
+        initial={{
+          translateY:"7rem",
+          opacity:0,
+          backgroundColor:"#F3F5F1"
+        }}
+        whileInView={{
+          translateY:"0rem",
+          opacity:1
+        }}
+        transition={{
+          type:"spring",
+          stiffness:160,
+          duration:0.1,
+          damping:14.5,
+        }}
+        onMouseEnter={
+          ()=>{
+            setScImage({
+              commerc:true
+            })
+          }
+        }
+        onMouseLeave={
+          ()=>{
+            setScImage({
+              commerc:false
+            })
+          }
+        }
+        whileHover={{
+          backgroundColor:"rgba(0,0,0,0.7)"
+        }}
+        >
+          <motion.img src="/House(1).png" alt="" className={ style.cImage } 
+          animate={
+            scimage.commerc ? {
+              scale:1.2,
+            }
+            :{
+              scale:1,
+            }
+          } 
+          transition={{
+            type:"tween",
+            ease:"easeInOut",
+            duration:0.5
+          }}
+          />
+          <motion.div className={ style.cText }
+          animate={
+            scimage.commerc ? {
+              marginTop:"0.8rem",
+              fontSize:"1.3rem",
+              color:"white"
+            }:{
+              fontSize:"1.1rem",
+              marginTop:"0.2rem",
+              color:"black"
+            }
+          }
+          >
+            Commercial
+          </motion.div>
+        </motion.a>
+        <motion.a href='/factory' className={`${style.card} ${style.cmgn} ${ style.fourthCmgn }`}
+        initial={{
+          translateY:"7rem",
+          opacity:0,
+          backgroundColor:"#F3F5F1"
+        }}
+        whileInView={{
+          translateY:"0rem",
+          opacity:1
+        }}
+        transition={{
+          type:"spring",
+          stiffness:160,
+          duration:0.1,
+          damping:14.5,
+        }}
+        onMouseEnter={
+          ()=>{
+            setScImage({
+              indust:true
+            })
+          }
+        }
+        onMouseLeave={
+          ()=>{
+            setScImage({
+              indust:false
+            })
+          }
+        }
+        whileHover={{
+          backgroundColor:"rgba(0,0,0,0.7)"
+        }}
+        >
+          <motion.img src="/House(1).png" alt="" className={ style.cImage }
+          animate={
+            scimage.indust ? {
+              scale:1.2,
+            }
+            :{
+              scale:1,
+            }
+          } 
+          transition={{
+            type:"tween",
+            ease:"easeInOut",
+            duration:0.5
+          }}
+           />
+           <motion.div className={ style.cText }
+          animate={
+            scimage.indust ? {
+              marginTop:"0.8rem",
+              fontSize:"1.3rem",
+              color:"white"
+            }:{
+              fontSize:"1.1rem",
+              marginTop:"0.2rem",
+              color:"black"
+            }
+          }
+          >
+            Factories
+          </motion.div>
+        </motion.a>
+      </motion.div>
+      <a href='#'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium accusamus quia, totam similique animi obcaecati fugit nam mollitia delectus deserunt, sequi ducimus neque reiciendis officia praesentium aliquam. Totam, labore amet!
+      </a>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium accusamus quia, totam similique animi obcaecati fugit nam mollitia delectus deserunt, sequi ducimus neque reiciendis officia praesentium aliquam. Totam, labore amet!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium accusamus quia, totam similique animi obcaecati fugit nam mollitia delectus deserunt, sequi ducimus neque reiciendis officia praesentium aliquam. Totam, labore amet!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium accusamus quia, totam similique animi obcaecati fugit nam mollitia delectus deserunt, sequi ducimus neque reiciendis officia praesentium aliquam. Totam, labore amet!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium accusamus quia, totam similique animi obcaecati fugit nam mollitia delectus deserunt, sequi ducimus neque reiciendis officia praesentium aliquam. Totam, labore amet!
+      </p>
     </>
   )
 }
