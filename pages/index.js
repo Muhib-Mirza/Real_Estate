@@ -3,7 +3,7 @@ import Searchbar from './Component/SearchBar';
 import style from "../styles/Section.module.css";
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import Fotter from "./Component/Footer";
+import Fotter from './Component/Fotter';
 
 export default function Home() {
   const [scimage,setScImage] = useState({
