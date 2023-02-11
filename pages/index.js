@@ -3,6 +3,7 @@ import Searchbar from './Component/SearchBar';
 import style from "../styles/Section.module.css";
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Fotter from "./Component/Footer";
 
 export default function Home() {
   const [scimage,setScImage] = useState({
@@ -341,6 +342,7 @@ export default function Home() {
         Our Properties
       </motion.h1>
         </div>
+        <Fotter />
     </>
   )
 }
