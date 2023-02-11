@@ -15,7 +15,7 @@ const Navbar = () => {
     <>
       <Head>
         <title>Dream Villa</title>
-        <meta name="description" content="All Kind of the Properties are available here" />
+        <meta name="description" content="Dream Villa. All kind of Property is Availabla here." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/house.png" />
       </Head>
