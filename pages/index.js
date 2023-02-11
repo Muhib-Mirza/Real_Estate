@@ -122,11 +122,6 @@ export default function Home() {
               color:"black"
             }
           }
-          transition={{
-            type:"tween",
-            ease:"easeInOut",
-            duration:0.5
-          }}
           >
             Resedential
           </motion.div>
@@ -192,11 +187,6 @@ export default function Home() {
               color:"black"
             }
           }
-          transition={{
-            type:"tween",
-            ease:"easeInOut",
-            duration:0.5
-          }}
           >
             Land
           </motion.div>
@@ -262,11 +252,6 @@ export default function Home() {
               color:"black"
             }
           }
-          transition={{
-            type:"tween",
-            ease:"easeInOut",
-            duration:0.5
-          }}
           >
             Commercial
           </motion.div>
@@ -332,11 +317,6 @@ export default function Home() {
               color:"black"
             }
           }
-          transition={{
-            type:"tween",
-            ease:"easeInOut",
-            duration:0.5
-          }}
           >
             Industrial
           </motion.div>
