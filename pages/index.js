@@ -166,7 +166,7 @@ export default function Home() {
           backgroundColor:"rgba(0,0,0,0.7)"
         }}
         >
-          <motion.img src="/House(1).png" alt="" className={ style.cImage } 
+          <motion.img src="/architect.png" alt="" className={ style.cImage } 
           animate={
             scimage.land ? {
               scale:1.2,
@@ -231,7 +231,7 @@ export default function Home() {
           backgroundColor:"rgba(0,0,0,0.7)"
         }}
         >
-          <motion.img src="/House(1).png" alt="" className={ style.cImage } 
+          <motion.img src="/building.png" alt="" className={ style.cImage } 
           animate={
             scimage.commerc ? {
               scale:1.2,
@@ -296,7 +296,7 @@ export default function Home() {
           backgroundColor:"rgba(0,0,0,0.7)"
         }}
         >
-          <motion.img src="/House(1).png" alt="" className={ style.cImage }
+          <motion.img src="/factory.png" alt="" className={ style.cImage }
           animate={
             scimage.indust ? {
               scale:1.2,
@@ -324,25 +324,29 @@ export default function Home() {
             }
           }
           >
-            Factories
+            Industrial
           </motion.div>
         </motion.a>
       </motion.div>
-      <a href='#'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium accusamus quia, totam similique animi obcaecati fugit nam mollitia delectus deserunt, sequi ducimus neque reiciendis officia praesentium aliquam. Totam, labore amet!
-      </a>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium accusamus quia, totam similique animi obcaecati fugit nam mollitia delectus deserunt, sequi ducimus neque reiciendis officia praesentium aliquam. Totam, labore amet!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium accusamus quia, totam similique animi obcaecati fugit nam mollitia delectus deserunt, sequi ducimus neque reiciendis officia praesentium aliquam. Totam, labore amet!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium accusamus quia, totam similique animi obcaecati fugit nam mollitia delectus deserunt, sequi ducimus neque reiciendis officia praesentium aliquam. Totam, labore amet!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium accusamus quia, totam similique animi obcaecati fugit nam mollitia delectus deserunt, sequi ducimus neque reiciendis officia praesentium aliquam. Totam, labore amet!
-      </p>
+      <div className={style.ptHead }>
+      <motion.h1 initial={{
+        opacity:0,
+        translateY:"5rem"
+      }}
+      whileInView={{
+        translateY:"0rem",
+        opacity:1
+      }}
+      transition={{
+        type:"spring",
+        duration:0.2,
+        stiffness:100,
+        damping:11
+      }}
+       >
+        Our Properties
+      </motion.h1>
+        </div>
     </>
   )
 }
