@@ -16,11 +16,12 @@
 }
 
 .link{
-    height: 22rem;
+    height: 23rem;
     width: 13rem;
     text-decoration: none;
     color: black;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+    margin-left: 1.5rem;
 }
 
 .cImage{
@@ -95,18 +96,19 @@
 }
 
 .rpic{
-    width: 1.2rem;
-    filter: invert(0.4);
+    width: 1.55rem;
+    filter: invert(0.2);
+    padding-top: 0.1rem;
 }
 
 .bpic{
-    width: 1.4rem;
-    filter: invert(0.4);
+    width: 1.2rem;
+    filter: invert(0.2);
 }
 
 .wpic{
     width: 1rem;
-    filter: invert(0.4);
+    filter: invert(0.3);
 }
 
 .rno{
@@ -139,4 +141,39 @@
     font-size: smaller;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 700;
+}
+
+@media screen and (max-width:462px) {
+    .link{
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width:460px) and (max-width:600px) {
+    .cardContainer{
+        flex-direction: column;
+    }
+    .link{
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:770px) {
+    .link{
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width:770px) and (max-width:990px) {
+    .cardContainer{
+        width: 70vw;
+    }
+}
+
+@media screen and (min-width:990px) and (max-width:1050px) {
+    .cardContainer{
+        width: 52vw;
+    }
 }
