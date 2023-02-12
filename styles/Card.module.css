@@ -1,0 +1,142 @@
+.cardContainer{
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+}
+
+.link{
+    height: 22rem;
+    width: 13rem;
+    text-decoration: none;
+    color: black;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+}
+
+.cImage{
+    width: 13rem;
+    height: 11.5rem;
+    filter: brightness(0.8);
+    transition: all 0.2s ease;
+}
+
+.dealer{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.circle{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.name{
+    font-size: small;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    margin-left: 0.5rem;
+}
+
+.location{
+    margin-top: 0.8rem;
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.locName{
+    margin-left: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+}
+
+.sale{
+    margin-left: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    background-color: rgba(0,212,255,0.6);
+    width: 3rem;
+    text-align: center;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+}
+
+.iconContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.iconContainer2{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 0.5rem;
+}
+
+.rpic{
+    width: 1.2rem;
+    filter: invert(0.4);
+}
+
+.bpic{
+    width: 1.4rem;
+    filter: invert(0.4);
+}
+
+.wpic{
+    width: 1rem;
+    filter: invert(0.4);
+}
+
+.rno{
+    margin-left: 0.3rem;
+    font-family: 'Nunito Sans', sans-serif;
+    color: rgba(0,0,0,0.4);
+}
+
+.priceContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.price{
+    width: 5rem;
+    height: 1.5rem;
+    background-color: #00D4FF;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-family: 'Nunito Sans', sans-serif;
+    border-radius: 0.2rem;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.unit{
+    font-size: smaller;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+}
