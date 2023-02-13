@@ -11,7 +11,7 @@
 .searchBar{
     width: 72vw;
     height: 5rem;
-    border: 6px solid #00D4FF;
+    border: 3.5px solid #00D4FF;
     margin: auto;
     display: flex;
     flex-direction: row;

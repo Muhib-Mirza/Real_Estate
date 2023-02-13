@@ -7,7 +7,6 @@
 
 body{
     overflow-x: hidden;
-    background-color: #E5ECEC;
 }
 .swiper-button-next:after, .swiper-button-prev:after {
     color: #00D4FF;

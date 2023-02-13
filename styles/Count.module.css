@@ -1,16 +1,8 @@
-.cardContainer{
-    width: 100vw;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .container{
+    margin-top: 10rem;
     width: 18rem;
     overflow-x: hidden;
     background-color: white;
-    margin-top: 1rem;
 }
 
 .item{
