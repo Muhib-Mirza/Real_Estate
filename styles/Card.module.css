@@ -32,8 +32,6 @@
 
 .cImage{
     width: 16rem;
-    filter: brightness(0.8);
-    transition: all 0.2s ease;
 }
 
 .dealer{

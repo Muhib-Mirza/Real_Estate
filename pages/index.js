@@ -384,13 +384,6 @@ export default function Home() {
           whileHover={{
             boxShadow: "4px 4px 5px rgba(0,0,0,0.5)",
           }}
-          
-          onMouseEnter={() => {
-            document.querySelector(".cimg").style.filter = "brightness(1)";
-          }}
-          onMouseLeave={() => {
-            document.querySelector(".cimg").style.filter = "brightness(0.8)";
-          }}
         >
           <div className={cstyle.card}>
             <img

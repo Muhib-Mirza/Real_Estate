@@ -4,6 +4,7 @@ import Head from "next/head";
 import { useState } from "react";
 
 const Navbar = () => {
+  document.querySelector(".swiper-wrapper").style.marginLeft = "0rem"
   const onHover = {
     hover: {
       scale: 1.2,
