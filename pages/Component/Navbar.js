@@ -1,11 +1,10 @@
 import style from "../../styles/Navbar.module.css";
 import { easeIn, motion } from "framer-motion";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import React from 'react';
 
 const Navbar = () => {
-  document.querySelector(".swiper-wrapper").style.marginLeft = "0rem"
   const onHover = {
     hover: {
       scale: 1.2,

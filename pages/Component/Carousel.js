@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import style from "../../styles/Home.module.css";
 import { motion } from "framer-motion"
+import { useEffect } from "react";
+import React from 'react'
 
 // Import Swiper styles
 import "swiper/css";
@@ -10,6 +12,11 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, EffectCreative, Navigation } from "swiper";
 
 export default function App() {
+  useEffect(
+    ()=>{
+      document.querySelector(".swiper-wrapper").style.marginLeft = "0rem"
+    },[]
+  )
   return (
     <>
       <Swiper
