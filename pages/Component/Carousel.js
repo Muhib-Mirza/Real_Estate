@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Pagination, EffectCreative, Navigation } from "swiper";
-import { useEffect } from "react";
 import React from 'react';
 
 
@@ -40,10 +39,7 @@ export default function App() {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay, Pagination, Navigation, EffectCreative]}
+        modules={[Autoplay, Navigation, EffectCreative]}
         className="mySwiper"
       >
         <SwiperSlide>

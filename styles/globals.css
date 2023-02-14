@@ -17,15 +17,17 @@ body{
     overflow-y: hidden;
 }
 
-/* .swiper-wrapper{
-    margin-left: 1rem;
-} */
-
 @media screen and (max-width:600px) {
     .mySwiper{
         margin-top: 5rem;
     }
     .swiper-button-next:after, .swiper-button-prev:after{
         scale: 0.6;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .swiper-pagination-bullets-dynamic{
+        transform: translateX(-4rem) !important;
     }
 }
