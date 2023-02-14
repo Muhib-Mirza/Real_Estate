@@ -1,7 +1,7 @@
 import style from "../../styles/Navbar.module.css";
 import { easeIn, motion } from "framer-motion";
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import React from 'react';
 
 const Navbar = () => {

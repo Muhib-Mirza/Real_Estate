@@ -1,17 +1,17 @@
 .cardContainer{
-    width: 100vw;
+    width: 90vw;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.container{
+/* .container{
     width: 18rem;
     overflow-x: hidden;
     background-color: white;
     margin-top: 1rem;
-}
+} */
 
 .item{
     height: 24rem;

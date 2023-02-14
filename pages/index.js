@@ -7,11 +7,12 @@ import Fotter from './Component/Fotter';
 import { Swiper, SwiperSlide } from "swiper/react";
 import React from 'react';
 import "swiper/css";
-import "swiper/css/effect-creative";
+import "swiper/css/pagination";
 import { Autoplay, Pagination, EffectCreative } from "swiper";
 import cstyle from "../styles/Card.module.css"
 
 export default function Home() {
+  
   const [scimage,setScImage] = useState({
     house:false,
     indust:false,
@@ -354,21 +355,25 @@ export default function Home() {
         </div>
         {/* Card Section */}
         <Swiper
-        grabCursor={true}
-        effect={"creative"}
-        creativeEffect={{
-          prev: {
-            shadow: true,
-            translate: [0, 0, -400],
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
           },
-          next: {
-            translate: ["100%", 0, 0],
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
           },
         }}
+        grabCursor={true}
         pagination={{
-          clickable:true
-        }} 
-        modules={[ Autoplay, Pagination, EffectCreative]}
+          dynamicBullets: true,
+        }}
+        modules={[ Autoplay, Pagination, ]}
         className={`mySwiper ${ cstyle.container }`}
         autoplay={{
           delay: 2500,

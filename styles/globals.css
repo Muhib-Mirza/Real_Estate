@@ -17,9 +17,9 @@ body{
     overflow-y: hidden;
 }
 
-.swiper-wrapper{
+/* .swiper-wrapper{
     margin-left: 1rem;
-}
+} */
 
 @media screen and (max-width:600px) {
     .mySwiper{
