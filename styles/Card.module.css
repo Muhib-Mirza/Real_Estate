@@ -249,6 +249,7 @@
 
 @media screen and (max-width:350px) {
     .container{
+        width: 90vw;
         margin-left: 2rem;
     }
 }
