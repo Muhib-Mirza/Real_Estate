@@ -8,11 +8,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import React from 'react';
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay, Pagination, EffectCreative } from "swiper";
-import cstyle from "../styles/Card.module.css"
+import { Autoplay, Pagination } from "swiper";
+import cstyle from "../styles/Card.module.css";
+import Navbar from './Component/Navbar';
 
 export default function Home() {
-  
+
   const [scimage,setScImage] = useState({
     house:false,
     indust:false,
@@ -20,8 +21,40 @@ export default function Home() {
     land:false,
   });
   
+  const secParent={
+    hidden:{
+      opacity:0
+    },
+    animate:{
+      opacity:1,
+      transition:{
+        duration:0.2,
+        staggerChildren:0.2
+      }
+    }
+  }
+
+  const secChild={
+    hidden:{
+      translateY:"7rem",
+          opacity:0,
+          backgroundColor:"#F3F5F1"
+    },
+    animate:{
+      translateY:"0rem",
+          opacity:1,
+          transition:{
+            type:"spring",
+          stiffness:160,
+          duration:0.1,
+          damping:14.5,
+          }
+    }
+  }
+
   return (
     <>
+      <Navbar/>
       <Carousel />
       <Searchbar />
       <div className={style.head }>
@@ -59,33 +92,16 @@ export default function Home() {
         Our Categories
       </motion.h1>
       </div>
+
+      {/* Section Card */}
+
       <motion.div className={ style.cContainer }
-      initial={{
-        opacity:0
-      }}
-      whileInView={{
-        opacity:1
-      }}
-      transition={{
-        duration:0.1,
-      }}
+      variants={ secParent }
+      initial={"hidden"}
+      whileInView={"animate"}
       >
         <motion.a href='/home' className={ style.card } 
-        initial={{
-          translateY:"7rem",
-          opacity:0,
-          backgroundColor:"#F3F5F1"
-        }}
-        whileInView={{
-          translateY:"0rem",
-          opacity:1
-        }}
-        transition={{
-          type:"spring",
-          stiffness:160,
-          duration:0.1,
-          damping:14.5,
-        }}
+        variants={ secChild }
         onMouseEnter={
           ()=>{
             setScImage({
@@ -135,22 +151,7 @@ export default function Home() {
           </motion.div>
         </motion.a>
         <motion.a href='/land' className={`${style.card} ${style.cmgn} `}
-        initial={{
-          translateY:"7rem",
-          opacity:0,
-          backgroundColor:"#F3F5F1"
-        }}
-        whileInView={{
-          translateY:"0rem",
-          opacity:1
-        }}
-        transition={{
-          type:"spring",
-          stiffness:160,
-          duration:0.1,
-          damping:14.5,
-          delay:0.05,
-        }}
+        variants={ secChild }
         onMouseEnter={
           ()=>{
             setScImage({
@@ -201,22 +202,7 @@ export default function Home() {
           </motion.div>
         </motion.a>
         <motion.a href='/commercial' className={`${style.card} ${style.cmgn} ${ style.thirdCmgn }`}
-        initial={{
-          translateY:"7rem",
-          opacity:0,
-          backgroundColor:"#F3F5F1"
-        }}
-        whileInView={{
-          translateY:"0rem",
-          opacity:1
-        }}
-        transition={{
-          type:"spring",
-          stiffness:160,
-          duration:0.1,
-          damping:14.5,
-          delay:0.07,
-        }}
+        variants={ secChild }
         onMouseEnter={
           ()=>{
             setScImage({
@@ -268,21 +254,7 @@ export default function Home() {
           </motion.div>
         </motion.a>
         <motion.a href='/factory' className={`${style.card} ${style.cmgn} ${ style.fourthCmgn }`}
-        initial={{
-          translateY:"7rem",
-          opacity:0,
-          backgroundColor:"#F3F5F1"
-        }}
-        whileInView={{
-          translateY:"0rem",
-          opacity:1
-        }}
-        transition={{
-          type:"spring",
-          stiffness:160,
-          duration:0.1,
-          damping:14.5,
-        }}
+        variants={ secChild }
         onMouseEnter={
           ()=>{
             setScImage({

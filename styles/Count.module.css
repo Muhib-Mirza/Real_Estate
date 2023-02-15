@@ -1,4 +1,4 @@
-.container{
+/* .container{
     margin-top: 10rem;
     width: 18rem;
     overflow-x: hidden;
@@ -157,4 +157,22 @@
     text-align: center;
     height: 1.3rem;
     margin-left: 0.7rem;
+} */
+
+.container{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.item{
+    width: 50vw;
+    border: 2px solid burlywood;
+    margin-top: 2rem;
+    text-align: center;
+    height: 1.23rem;
+    border-radius: 5px;
 }

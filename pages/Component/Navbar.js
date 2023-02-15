@@ -41,7 +41,7 @@ const Navbar = () => {
                 Home
               </motion.li>
             </a>
-            <a className={style.link} href="/about">
+            <a className={style.link} href=".about">
               <motion.li
                 variants={onHover}
                 whileHover={"hover"}
@@ -133,7 +133,7 @@ const Navbar = () => {
                 Home
               </motion.li>
             </a>
-            <a className={style.link} href="/about">
+            <a className={style.link} href=".about">
               <motion.li
                 variants={onHover}
                 whileHover={"hover"}
