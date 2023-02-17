@@ -1,7 +1,7 @@
 import Carousel from "@/Component/Carousel";
 import Searchbar from "@/Component/SearchBar";
 import style from "../styles/homepage/Section.module.css";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 import { useState } from "react";
 import Fotter from "@/Component/Fotter";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -30,6 +30,25 @@ export default function Home() {
       transition: {
         duration: 0.2,
         staggerChildren: 0.2,
+        repeat: 0,
+      },
+    },
+  };
+
+  const secChild = {
+    hidden: {
+      y: "7rem",
+      opacity: 0,
+      backgroundColor: "#F3F5F1",
+    },
+    animate: {
+      y: "0rem",
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 160,
+        duration: 0.1,
+        damping: 14.5,
         repeat: 0,
       },
     },
@@ -67,8 +86,8 @@ export default function Home() {
     },
   };
 
-  const [flag,setFlag] = useState(false);
-  const [sectionflag,setSectionFlag] = useState(false);
+  const [flag, setFlag] = useState(false);
+  const [sectionflag, setSectionFlag] = useState(false);
 
   return (
     <>
@@ -77,10 +96,13 @@ export default function Home() {
       <Searchbar />
       <div className={style.head}>
         <motion.h1
-        onViewportEnter={()=>{setFlag(true);console.log(flag)}}
+          onViewportEnter={() => {
+            setFlag(true);
+            console.log(flag);
+          }}
           initial={{
-            opacity: flag?1: 0,
-            y:flag?"0rem":"5rem",
+            opacity: flag ? 1 : 0,
+            y: flag ? "0rem" : "5rem",
           }}
           whileInView={{
             y: "0rem",
@@ -97,10 +119,13 @@ export default function Home() {
           Our Categories & Places
         </motion.h1>
         <motion.h1
-        onViewportEnter={()=>{ setFlag(true);console.log(flag) }}
+          onViewportEnter={() => {
+            setFlag(true);
+            console.log(flag);
+          }}
           className={style.mobHead}
           initial={{
-            opacity: flag ? 1: 0,
+            opacity: flag ? 1 : 0,
             translateY: flag ? "0rem" : "5rem",
           }}
           whileInView={{
@@ -120,31 +145,19 @@ export default function Home() {
       {/* Section Card */}
 
       <motion.div
+        onViewportEnter={() => {
+          setSectionFlag(true);
+        }}
         className={style.cContainer}
         variants={secParent}
         initial={"hidden"}
-        whileInView={"animate"}
+        animate={sectionflag ? "animate" : "hidden"}
+        whileInView={{ repeatCount: 0 }}
       >
         <motion.a
           href="/home"
+          variants={secChild}
           className={style.card}
-          initial={{
-            y: sectionflag ? "0rem" : "7rem",
-            opacity: sectionflag ? 1 : 0,
-            backgroundColor: "#F3F5F1",
-          }}
-          whileInView={{
-            y: "0rem",
-            opacity: 1,
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 160,
-            duration: 0.1,
-            damping: 14.5,
-            repeat:0
-          }}
-          onViewportEnter={()=>{ setSectionFlag(true) } }
           onMouseEnter={() => {
             setScImage({
               house: true,
@@ -200,23 +213,10 @@ export default function Home() {
         <motion.a
           href="/land"
           className={`${style.card} ${style.cmgn} `}
-          initial={{
-            y: sectionflag ? "0rem" : "7rem",
-            opacity: sectionflag ? 1 : 0,
-            backgroundColor: "#F3F5F1",
+          variants={secChild}
+          onViewportEnter={() => {
+            setSectionFlag(true);
           }}
-          whileInView={{
-            y: "0rem",
-            opacity: 1,
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 160,
-            duration: 0.1,
-            damping: 14.5,
-            repeat:0
-          }}
-          onViewportEnter={()=>{ setSectionFlag(true) } }
           onMouseEnter={() => {
             setScImage({
               land: true,
@@ -272,22 +272,7 @@ export default function Home() {
         <motion.a
           href="/commercial"
           className={`${style.card} ${style.cmgn} ${style.thirdCmgn}`}
-          initial={{
-            y: sectionflag ? "0rem" : "7rem",
-            opacity: sectionflag ? 1 : 0,
-            backgroundColor: "#F3F5F1",
-          }}
-          whileInView={{
-            y: "0rem",
-            opacity: 1,
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 160,
-            duration: 0.1,
-            damping: 14.5,
-            repeat:0
-          }}
+          variants={secChild}
           onMouseEnter={() => {
             setScImage({
               commerc: true,
@@ -344,22 +329,7 @@ export default function Home() {
         <motion.a
           href="/factory"
           className={`${style.card} ${style.cmgn} ${style.fourthCmgn}`}
-          initial={{
-            y: sectionflag ? "0rem" : "7rem",
-            opacity: sectionflag ? 1 : 0,
-            backgroundColor: "#F3F5F1",
-          }}
-          whileInView={{
-            y: "0rem",
-            opacity: 1,
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 160,
-            duration: 0.1,
-            damping: 14.5,
-            repeat:0
-          }}
+          variants={secChild}
           onMouseEnter={() => {
             setScImage({
               indust: true,
