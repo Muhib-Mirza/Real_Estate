@@ -1,17 +1,17 @@
-import Carousel from "../Component/Carousel";
-import Searchbar from "../Component/SearchBar";
+import Carousel from "@/Component/Carousel";
+import Searchbar from "@/Component/SearchBar";
 import style from "../styles/homepage/Section.module.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Fotter from "../Component/Fotter";
+import Fotter from "@/Component/Fotter";
 import { Swiper, SwiperSlide } from "swiper/react";
 import React from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper";
-import cstyle from "../styles/homepage/Card.module.css";
-import Navbar from "../Component/Navbar";
-import About from "./about";
+import cstyle from "@/styles/homepage/Card.module.css";
+import Navbar from "@/Component/Navbar";
+import About from "@/Component/about";
 
 export default function Home() {
   const [scimage, setScImage] = useState({
@@ -453,7 +453,7 @@ export default function Home() {
               slidesPerView: 3,
               spaceBetween: 50,
             },
-            1100: {
+            1101: {
               slidesPerView: 4,
               spaceBetween: 50,
             },
