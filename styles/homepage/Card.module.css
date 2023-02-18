@@ -243,7 +243,8 @@
 
 @media screen and (max-width:380px) and (min-width:350px) {
     .container{
-        margin-left: 3.5rem;
+        width: 85vw;
+        margin-left: 3.3rem;
     }
 }
 

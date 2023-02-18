@@ -1,7 +1,7 @@
 import Carousel from "@/Component/Carousel";
 import Searchbar from "@/Component/SearchBar";
-import style from "../styles/homepage/Section.module.css";
-import { animate, motion } from "framer-motion";
+import style from "@/styles/homepage/Section.module.css";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import Fotter from "@/Component/Fotter";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -88,7 +88,7 @@ export default function Home() {
 
   const [flag, setFlag] = useState(false);
   const [sectionflag, setSectionFlag] = useState(false);
-
+  const [cardflag,setCardFlag] = useState(false);
   return (
     <>
       <Navbar />
@@ -98,7 +98,6 @@ export default function Home() {
         <motion.h1
           onViewportEnter={() => {
             setFlag(true);
-            console.log(flag);
           }}
           initial={{
             opacity: flag ? 1 : 0,
@@ -121,7 +120,6 @@ export default function Home() {
         <motion.h1
           onViewportEnter={() => {
             setFlag(true);
-            console.log(flag);
           }}
           className={style.mobHead}
           initial={{
@@ -405,9 +403,19 @@ export default function Home() {
       </div>
       {/* Card Section */}
       <motion.div
-        variants={cardParent}
-        initial="hidden"
-        whileInView={"animate"}
+      onViewportEnter={
+        ()=>{
+          setCardFlag(true)
+        }
+      }
+        variants={ cardParent }
+        initial={
+          "hidden"
+        }
+        animate={cardflag ? "animate" : "hidden" }
+        whileInView={{
+          repeatCount:0,
+        }}
       >
         <Swiper
           breakpoints={{
@@ -442,12 +450,17 @@ export default function Home() {
         >
           <SwiperSlide className={cstyle.item}>
             <motion.div
+            variants={cardChild}
+            onViewportEnter={
+              ()=>{
+                setCardFlag(true)
+              }
+            }
               href="http://"
               className={cstyle.link}
               whileHover={{
                 boxShadow: "4px 4px 5px rgba(0,0,0,0.5)",
               }}
-              variants={cardChild}
             >
               <div className={cstyle.card}>
                 <img
