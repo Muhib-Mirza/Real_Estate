@@ -14,6 +14,10 @@ import Navbar from "@/Component/Navbar";
 import About from "@/Component/about";
 
 export default function Home() {
+  const [flag, setFlag] = useState(false);
+  const [sectionflag, setSectionFlag] = useState(false);
+  const [cardflag, setCardFlag] = useState(false);
+  const [cardhead, setCardHead] = useState(false);
   const [scimage, setScImage] = useState({
     house: false,
     indust: false,
@@ -86,9 +90,6 @@ export default function Home() {
     },
   };
 
-  const [flag, setFlag] = useState(false);
-  const [sectionflag, setSectionFlag] = useState(false);
-  const [cardflag,setCardFlag] = useState(false);
   return (
     <>
       <Navbar />
@@ -383,9 +384,10 @@ export default function Home() {
       </motion.div>
       <div className={style.ptHead}>
         <motion.h1
+          onViewportEnter={() => setCardHead(true)}
           initial={{
-            opacity: 0,
-            y: "5rem",
+            opacity: cardhead ? 1 : 0,
+            y: cardhead ? "0rem" : "5rem",
           }}
           whileInView={{
             y: "0rem",
@@ -403,18 +405,14 @@ export default function Home() {
       </div>
       {/* Card Section */}
       <motion.div
-      onViewportEnter={
-        ()=>{
-          setCardFlag(true)
-        }
-      }
-        variants={ cardParent }
-        initial={
-          "hidden"
-        }
-        animate={cardflag ? "animate" : "hidden" }
+        onViewportEnter={() => {
+          setCardFlag(true);
+        }}
+        variants={cardParent}
+        initial={"hidden"}
+        animate={cardflag ? "animate" : "hidden"}
         whileInView={{
-          repeatCount:0,
+          repeatCount: 0,
         }}
       >
         <Swiper
@@ -450,12 +448,10 @@ export default function Home() {
         >
           <SwiperSlide className={cstyle.item}>
             <motion.div
-            variants={cardChild}
-            onViewportEnter={
-              ()=>{
-                setCardFlag(true)
-              }
-            }
+              variants={cardChild}
+              onViewportEnter={() => {
+                setCardFlag(true);
+              }}
               href="http://"
               className={cstyle.link}
               whileHover={{
