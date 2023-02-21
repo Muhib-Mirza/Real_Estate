@@ -8,7 +8,7 @@
 
 .image {
   width: 21.2rem;
-  height: 56.5rem;
+  height: 58.1rem;
 }
 
 .aboutSection {
@@ -40,15 +40,15 @@
   display: none;
 }
 
+.mobAboutPic{
+  display: none;
+}
+
 .aboutText {
   margin-top: 2rem;
   width: 30rem;
   font-family: "Nunito Sans", sans-serif;
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.counterContainer {
-  margin-top: 2rem;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .years {
@@ -89,7 +89,7 @@
       }
       .image {
         width: 19.2rem;
-        height: 54.5rem;
+        height: 57.7rem;
       }
       .aboutSection {
         margin-left: 5rem;
@@ -123,7 +123,7 @@
   }
   .image {
     width: 19.2rem;
-    height: 49.5rem;
+    height: 52.8rem;
   }
   .aboutSection {
     margin-left: 5rem;
@@ -156,7 +156,7 @@
       }
       .image {
         width: 19.2rem;
-        height: 46.5rem;
+        height: 50rem;
       }
       .aboutSection {
         margin-left: 5rem;
@@ -177,7 +177,7 @@
         font-size: 1.9rem;
       }
       .years{
-        width: 12rem;
+        width: 13rem;
         font-size: 0.94rem;
       }
       .realtor{
@@ -187,32 +187,32 @@
 }
 @media screen and (min-width: 660px) and (max-width: 800px) {
   .container {
-    width: 95vw;
+    width: 90vw;
     justify-content: center;
     align-items: center;
   }
-  .image {
-    width: 19.2rem;
-    height: 56rem;
+  .image{
+    width: 16rem;
+    height: 45rem;
   }
   .aboutSection {
-    margin-left: 0;
+    margin-left: 1rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
   .aboutText {
-    width: 22rem;
+    width: 24rem;
     text-align: center;
     margin-top: 1rem;
   }
+  .aboutPic{ 
+    display: none;
+  }
   .counterContainer {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
-  }
-  .aboutPic {
-    height: 13.5rem;
-    width: auto;
   }
   .aboutHead {
     display: block;
@@ -224,33 +224,32 @@
 
 @media screen and (max-width: 660px) and (min-width: 600px) {
   .container {
-    width: 95vw;
+    width: 90vw;
     justify-content: center;
     align-items: center;
-    margin-left: 0.5rem;
   }
-  .image {
-    width: 19.2rem;
-    height: 56rem;
+  .image{
+    width: 15rem;
+    height: 47rem;
   }
   .aboutSection {
-    margin-left: 0;
+    margin-left: 1rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
   .aboutText {
     width: 22rem;
-    text-align: center;
+    text-align:center;
     margin-top: 1rem;
   }
   .counterContainer {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
   }
   .aboutPic {
-    height: 13.5rem;
-    width: auto;
+    display: none;
   }
   .aboutHead {
     display: block;
@@ -276,16 +275,21 @@
     align-items: center;
   }
   .aboutText {
-    width: 22rem;
+    width: 29rem;
     text-align: center;
     margin-top: 1rem;
   }
   .counterContainer {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
   }
   .aboutPic {
-    height: 22rem;
+    display: none;
+  }
+  .mobAboutPic{
+    display: block;
+    height: 20rem;
     width: auto;
   }
   .aboutHead {
@@ -313,17 +317,23 @@
   }
   .aboutText {
     font-size: small;
-    width: 13rem;
+    width: 22rem;
     text-align: center;
     margin-top: 1rem;
   }
   .counterContainer {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
   }
   .aboutPic {
-    height: 16rem;
+    display: none;
+    margin-top: 1rem;
+  }
+  .mobAboutPic{
+    height: 15.5rem;
     width: auto;
+    display: block;
   }
   .mobAboutHead {
     display: block;
@@ -352,17 +362,23 @@
   }
   .aboutText {
     font-size: small;
-    width: 13rem;
+    width: 19rem;
     text-align: center;
     margin-top: 1rem;
   }
   .counterContainer {
+    margin-top:1rem;
     display: flex;
     flex-direction: column;
   }
   .aboutPic {
+    display: none;
+    margin-top: 1rem;
+  }
+  .mobAboutPic{
     height: 13rem;
     width: auto;
+    display: block;
   }
   .mobAboutHead {
     display: block;
