@@ -109,14 +109,17 @@ const Navbar = () => {
         </div>
         <motion.div className={ style.drawer }
         initial={{
-          x:"100vw"
+          x:"-100vw",
+          opacity:0,
         }
         }
         animate={
           flag ?{
-            x:0
+            x:0,
+            opacity:1,
           }:{
-            x:"100vw"
+            x:"-100vw",
+            opacity:0,
           }
         }
         transition={{
