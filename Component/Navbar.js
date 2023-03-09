@@ -18,14 +18,10 @@ const Navbar = () => {
   const [flag, setFlag] = useState(false);
   const toggle = ()=>{
     setFlag(!flag);
-    if(flag === true){
-      document.querySelector(".mySwiper").style.filter = "blur(0)"
-      document.querySelector(".search").style.filter = "blur(0)" 
+    if(flag === true){ 
       document.querySelector("body").style.overflow = "scroll"
     }else{
         document.querySelector("body").style.overflow = "hidden"
-        document.querySelector(".mySwiper").style.filter = "blur(1.5px)"
-        document.querySelector(".search").style.filter = "blur(1.5px)"
       }
   }
   return (
@@ -37,10 +33,12 @@ const Navbar = () => {
         <link rel="icon" href="/house.png" />
       </Head>
       <nav className={style.navbar}>
-        <div className={style.logo}>
-          Dream Villa
-          <div className={style.wname}>Real Estate Agency</div>
-        </div>
+      {
+            !flag &&  <div className={style.logo}>
+            Dream Villa
+            <div className={style.wname}>Real Estate Agency</div>
+          </div>
+          }
         <div className={style.navListContainer}>
           <ul className={style.navList}>
             <a className={`${style.link} ${style.nomgn}`} href="/">
@@ -109,23 +107,23 @@ const Navbar = () => {
         </div>
         <motion.div className={ style.drawer }
         initial={{
-          x:"-100vw",
+          y:"-150vh",
           opacity:0,
         }
         }
         animate={
           flag ?{
-            x:0,
+            y:0,
             opacity:1,
           }:{
-            x:"-100vw",
+            y:"-150vh",
             opacity:0,
           }
         }
         transition={{
           type:"tween",
-          ease:"easeIn",
-          duration:0.2,
+          ease:"easeInOut",
+          duration:0.3,
         }}
         >
           <div className={style.title}>

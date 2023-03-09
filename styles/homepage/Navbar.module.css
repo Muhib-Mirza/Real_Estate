@@ -69,7 +69,7 @@
 }
 .drawer{
   height: 100vh;
-  width: min(65vw, 400px);
+  width: 100vw;
   background-color: rgba(0,0,0,0.9);
   position: absolute;
   z-index: 99;
@@ -89,16 +89,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid papayawhip ;
 }
 .drwerlogo{
-  padding-right: 0.5rem;
   padding-bottom: 1rem;
-  font-size: 21px;
 }
 .cross{
   position: absolute;
-  top: 1.4rem;
-  right: 0.7rem;
+  top: 1.45rem;
+  right: 1.5rem;
   scale: 1.5;
 }
 .listTile{
