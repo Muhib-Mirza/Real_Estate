@@ -33,12 +33,10 @@ const Navbar = () => {
         <link rel="icon" href="/house.png" />
       </Head>
       <nav className={style.navbar}>
-      {
-            !flag &&  <div className={style.logo}>
+      <div className={style.logo}>
             Dream Villa
             <div className={style.wname}>Real Estate Agency</div>
           </div>
-          }
         <div className={style.navListContainer}>
           <ul className={style.navList}>
             <a className={`${style.link} ${style.nomgn}`} href="/">
@@ -101,9 +99,7 @@ const Navbar = () => {
         </div>
         {/* Drawer Code */}
         <div className={style.drawerImage} onClick={toggle} >
-          {
-            !flag && <img src="/drawer.svg" alt="Drawer" className={style.drawerIcon} />
-          }
+          <img src="/drawer.svg" alt="Drawer" className={style.drawerIcon} />
         </div>
         <motion.div className={ style.drawer }
         initial={{
