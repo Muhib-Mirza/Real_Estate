@@ -7,7 +7,7 @@ const Searchbar = () => {
   }
     return ( 
         <>
-        <div className={style.search}>
+        <div className={`${style.search} search`}>
         <form className={style.searchBar} onSubmit={handleSubmit}>
         <div className={style.container}>
           <label htmlFor="property_type" className={style.label}>Property Type</label>

@@ -4,8 +4,9 @@
     align-items: center;
     height: auto;
     position: absolute;
-    z-index: 99;
+    z-index: 80;
     top: 40rem;
+    transition: filter 0.3s ease;
 }
 
 .searchBar{

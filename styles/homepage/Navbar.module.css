@@ -64,30 +64,80 @@
 .nomgn{
   margin-left: 0rem !important;
 }
-.mobileNav {
+.drawerIcon{
   display: none;
 }
-.mobileList {
-  background-color: black;
+.drawer{
+  height: 100vh;
+  width: min(65vw, 400px);
+  background-color: rgba(0,0,0,0.9);
   position: absolute;
-  width: 8.7rem;
   z-index: 99;
-  list-style: none;
   right: 0;
-  margin-top: 0.8rem;
-  height: 10.82rem;
+  top: 0;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Nunito Sans', sans-serif;
+  margin-top:0.85rem;
+  display: none;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+  overflow-y:scroll;
+}
+
+.title{
+  margin-top: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
-  transform: translateX(-100vw);
-  opacity: 0;
-  overflow-x: hidden !important;
+  justify-content: center;
 }
-.drawer {
+.drwerlogo{
+  padding-right: 0.5rem;
+  padding-bottom: 1rem;
+  font-size: 21px;
+}
+.cross{
+  position: absolute;
+  top: 1.4rem;
+  right: 0.7rem;
+  scale: 1.5;
+}
+.listTile{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.7rem;
+}
+.list{
+  display: flex;
+  margin-top: 1.2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.link{
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.headHome{
+  display: inline-block;
+  padding-bottom: 0.7rem;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+.homeIcon{
+  padding-top: 0.15rem;
+  scale: 1.28;
+}
+.drawerImage{
   position: absolute;
   right: 2rem;
-  top: 2rem;
+  top: 2.3rem;
 }
 
 @media screen and (max-width: 710px) and (min-width: 640px) {
@@ -109,7 +159,10 @@
   .navListContainer {
     display: none;
   }
-  .mobileNav {
+  .drawer{
+    display: block;
+  }
+  .drawerIcon{
     display: block;
   }
   .mgn{
