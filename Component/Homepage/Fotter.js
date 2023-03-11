@@ -1,4 +1,4 @@
-import style from "../styles/homepage/Fotter.module.css";
+import style from "@/styles/homepage/Fotter.module.css";
 
 const Fotter = () => {
     return ( 

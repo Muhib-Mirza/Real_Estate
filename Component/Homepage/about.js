@@ -1,4 +1,4 @@
-import style from "../styles/homepage/About.module.css";
+import style from "@/styles/homepage/About.module.css";
 import CountUp from "react-countup";
 import { useState } from "react";
 import { motion } from "framer-motion";

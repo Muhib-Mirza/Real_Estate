@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import style from "../styles/homepage/Home.module.css";
+import style from "@/styles/homepage/Home.module.css";
 import { motion } from "framer-motion";
 
 // Import Swiper styles

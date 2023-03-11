@@ -1,4 +1,4 @@
-import style from "../styles/homepage/Navbar.module.css";
+import style from "@/styles/homepage/Navbar.module.css";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import { useState } from "react";
@@ -19,9 +19,9 @@ const Navbar = () => {
   const toggle = ()=>{
     setFlag(!flag);
     if(flag === true){ 
-      document.querySelector("body").style.overflow = "scroll"
+      document.querySelector("body").style.overflowY = "scroll"
     }else{
-        document.querySelector("body").style.overflow = "hidden"
+        document.querySelector("body").style.overflowY = "hidden"
       }
   }
   return (

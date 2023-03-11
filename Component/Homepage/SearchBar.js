@@ -1,4 +1,4 @@
-import style from "../styles/homepage/SearchBar.module.css"
+import style from "@/styles/homepage/SearchBar.module.css"
 import { motion } from "framer-motion"
 
 const Searchbar = () => {

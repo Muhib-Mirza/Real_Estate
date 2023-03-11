@@ -1,7 +1,7 @@
 .container {
   width: 85vw;
   margin: auto;
-  margin-top: 4rem;
+  margin-top: 8rem;
   margin-bottom: 0.5rem;
   display: flex;
 }
@@ -86,6 +86,7 @@
 @media screen and (min-width:1000px) and (max-width:1100px) {
     .container {
         width: 95vw;
+        margin-top: 5rem;
       }
       .image {
         width: 19.2rem;
@@ -120,6 +121,7 @@
 @media screen and (min-width: 870px) and (max-width: 1000px) {
   .container {
     width: 95vw;
+    margin-top: 5rem;
   }
   .image {
     width: 19.2rem;
@@ -153,6 +155,7 @@
 @media screen and (min-width:800px) and (max-width:870px) {
     .container {
         width: 97vw;
+        margin-top: 5rem;
       }
       .image {
         width: 19.2rem;
@@ -188,6 +191,7 @@
 @media screen and (min-width: 660px) and (max-width: 800px) {
   .container {
     width: 90vw;
+    margin-top: 4.5rem;
     justify-content: center;
     align-items: center;
   }
@@ -225,6 +229,7 @@
 @media screen and (max-width: 660px) and (min-width: 600px) {
   .container {
     width: 90vw;
+    margin-top: 4.5rem;
     justify-content: center;
     align-items: center;
   }
@@ -264,6 +269,7 @@
     width: 90vw;
     justify-content: center;
     align-items: center;
+    margin-top: 4.5rem;
   }
   .image {
     display: none;
@@ -305,6 +311,7 @@
     width: 90vw;
     justify-content: center;
     align-items: center;
+    margin-top: 4.5rem;
   }
   .image {
     display: none;
@@ -350,6 +357,7 @@
     width: 90vw;
     justify-content: center;
     align-items: center;
+    margin-top: 4.5rem;
   }
   .image {
     display: none;
